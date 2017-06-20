@@ -3,7 +3,7 @@ from econtextapi.classify.classify import Classify
 
 class Html(Classify):
     
-    PATH = "html"
+    PATH = "/html"
     
     def __init__(self, client, classify_data=None, *args, **kwargs):
         super(Html, self).__init__(client, 'html', classify_data)
