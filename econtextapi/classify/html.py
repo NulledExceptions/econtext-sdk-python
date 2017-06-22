@@ -3,7 +3,7 @@ from econtextapi.classify.classify import Classify
 
 class Html(Classify):
     
-    PATH = "html"
+    PATH = "/html"
     
     def __init__(self, client, classify_data=None, *args, **kwargs):
         super(Html, self).__init__(client, 'html', classify_data)
@@ -23,9 +23,9 @@ class Html(Classify):
         return response_object
     
     def print_summary(self):
-        print "Title: {}".format(self.title)
-        print "Classifications:"
+        print("Title: {}".format(self.title))
+        print("Classifications:")
         for scored_category in self.scored_categories:
-            print " * {:40} {:5}".format(self.categories[unicode(scored_category['category_id'])]['name'], scored_category['score'])
+            print(" * {:40} {:5}".format(self.categories[unicode(scored_category['category_id'])]['name'], scored_category['score']))
             
             
